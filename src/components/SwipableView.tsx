@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import { Dimensions } from "react-native";
 import {
   PanGestureHandler,
@@ -17,8 +18,8 @@ import { makeStyledComponent } from "../lib/styled";
 const StyledView = makeStyledComponent(Animated.View);
 
 interface Props extends Pick<PanGestureHandlerProps, "simultaneousHandlers"> {
-  children: React.ReactNode;
-  backView?: React.ReactNode;
+  children: ReactNode;
+  backView?: ReactNode;
   onSwipeLeft?: () => void;
 }
 
