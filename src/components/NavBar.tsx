@@ -4,7 +4,11 @@ import { Feather } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import { DrawerNavigationProp } from "@react-navigation/drawer";
 
-function NavBar() {
+interface Props {
+  isWhite: boolean;
+}
+
+function NavBar({ isWhite }: Props) {
   const navigation = useNavigation<DrawerNavigationProp<{}>>();
   const handlePressMenuButton = useCallback(() => {
     navigation.openDrawer();
@@ -19,7 +23,7 @@ function NavBar() {
           as: Feather,
           name: "menu",
           size: 6,
-          color: "white",
+          color: `${isWhite ? "white" : "black"}`,
         }}
       />
     </HStack>
@@ -27,3 +31,7 @@ function NavBar() {
 }
 
 export default NavBar;
+
+NavBar.defaultProps = {
+  isWhite: true,
+};
