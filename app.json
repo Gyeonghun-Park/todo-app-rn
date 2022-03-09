@@ -27,6 +27,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": " ToDo app built with React Native and Reanimated v2",
+    "githubUrl": "https://github.com/Gyeonghun-Park/todo-app-rn"
   }
 }
